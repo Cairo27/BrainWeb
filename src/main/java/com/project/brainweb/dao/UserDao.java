@@ -1,4 +1,7 @@
 package com.project.brainweb.dao;
 
-public interface UserDao {
+import com.project.brainweb.models.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserDao extends JpaRepository<Users, Integer> {
 }

@@ -6,14 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Users {
+public class Courses {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
     private String name;
-    private String email;
-    private String password;
-    private String dob;
+    private String time;
 
     public int getId() {
         return id;
@@ -31,27 +29,11 @@ public class Users {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTime() {
+        return time;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setTime(String time) {
+        this.time = time;
     }
 }

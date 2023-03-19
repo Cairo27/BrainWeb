@@ -6,14 +6,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Users {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class Admins {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String email;
     private String password;
-    private String dob;
+    private String confirmPassword;
 
     public int getId() {
         return id;
@@ -47,11 +47,11 @@ public class Users {
         this.password = password;
     }
 
-    public String getDob() {
-        return dob;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 }
